@@ -1,0 +1,113 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #F1EFE9;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.browh{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    font-weight: 800;
+font-size: 300px;
+line-height: 366px;
+color: #CFC9B8;
+left: 1200px;
+top: -370px;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    background: #F1EFE9;
+    height: 500px;
+    margin-top: 20em;
+    padding: 2em;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-areas: 
+        "tiger header header"
+        "tiger dog content"
+        "fish dog content";
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    grid-template-rows: auto 1fr 100px;
+    position: relative;
+}
+
+section:before{
+    position: absolute;
+    content: 'WOW';
+    font-weight: 800;
+    z-index: -1;
+    font-size: 30rem;
+    top: -190px;
+    left: -300px;
+}
+
+.tiger {
+    grid-area: tiger;
+}
+h1 {
+    grid-area: header;
+}
+.dog {
+    grid-area: dog;
+}
+.content {
+    grid-area: content;
+}
+.fish {
+    grid-area: fish;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    line-height: 1em;
+}
+
+p, a {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
