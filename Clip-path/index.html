@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Testing this out</h1>
+        </div>
+        <div class="img"></div>
+    </div>
+    <div class="container2">
+        <div class="content">
+            <h1>Testing this out</h1>
+        </div>
+        <div class="img"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" integrity="sha512-gWlyRVDsJvp5kesJt4cSdPPLZIBdln/uSwzYgUicQcbTgRNQE4QhP5KUBIYlLYLkiKIQiuD7KUMHzqGNW/D2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        const tl = gsap.timeline({paused: true, defaults: {duration: .05} })
+        const container = document.querySelector('.container')
+
+        tl.to(container, {clipPath: 'polygon(6% 6%, 94% 6%, 94% 94%, 6% 94%)'})
+        tl.to(container, {clipPath: 'polygon(94% 6%, 94% 6%, 94% 94%, 94% 94%)'}, '+=1')
+        tl.to('h1', {color: 'white'})
+        tl.to('.container2', {clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)'}, '+=1.2')
+
+        container.addEventListener('mouseover', () => {
+            tl.play()
+        })
+
+    </script>
+</body>
+</html>
